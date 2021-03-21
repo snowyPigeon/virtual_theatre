@@ -1,0 +1,88 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Virtual Theatre: Tour of the Mayflower</title>
+  <meta name="description" content="Virtual Theatre">
+  <meta name="author" content="Kimberley Ford">
+  <meta name="credit" content="Initial blank page html boilerplate courtesy of sitepoint.com, 
+  https://www.sitepoint.com/a-basic-html5-template/, 
+  additional resources from https://www.w3schools.com, 
+  https://riptutorial.com, and https://www.fontsquirrel.com, 
+  UpperEastSideFont by David Rakowski">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+<h1>Virtual Theatre: Tour of the Mayflower</h1>
+<div id="page">
+<!-- left walls -->
+<div id="wall_left_upper"></div>
+<div id="wall_left_lower"></div>
+<div class="tooltip" id="icecream_hatch_left"><span class="tooltiptext">Icecream hatch</span></div>
+<p class="tinytext" id="beechdean_l">Beechdean</p>
+<p class="tinytext" id="icecream_l">Icecream</p>
+<div id="icecream_hatch_left_sign"></div>
+<div id="icecream_hatch_left_sign_arc"></div>
+<div id="icecream_hatch_left_menu"></div>
+
+<!-- middle arch section -->
+<div id="container_arch">
+<div class="tooltip" id="arch_top"><span class="tooltiptext">Welcome to the Mayflower Theatre!</span></div>
+<div id="arch_outer"></div>
+<div id="arch_inner_top"></div>
+<div id="arch_inner_bottom"></div>
+<div id="curtain_topper"></div>
+<div class="tooltip" id="curtain_left" onclick="pull_curtains()"><span class="tooltiptext">The left curtain</span></div>
+<div class="tooltip" id="curtain_right" onclick="pull_curtains()"><span class="tooltiptext">The right curtain</span></div>
+</div>
+
+<!-- right walls -->
+<div id="wall_right_upper"></div>
+<div id="wall_right_lower"></div>
+<div class="tooltip" id="icecream_hatch_right"><span class="tooltiptext">Icecream hatch</span></div>
+<p class="tinytext" id="beechdean_r">Beechdean</p>
+<p class="tinytext" id="icecream_r">Icecream</p>
+<div id="icecream_hatch_right_sign"></div>
+<div id="icecream_hatch_right_sign_arc"></div>
+<div id="icecream_hatch_right_menu"></div>
+
+<!-- middle stage and seating section -->
+<div id="container_stage">
+<div class="tooltip" id="stage_top"><span class="tooltiptext">The stage, where the magic happens!</span></div>
+<div id="stage_side"></div>
+<div class="tooltip" id="orchestral_pit"><span class="tooltiptext">Orchestral pit</span></div>
+<!-- <div class="info_box" id="op_label"><p class="info">This is the orchestral pit.</p></div> -->
+</div>
+<div class="tooltip" id="stalls"><span class="tooltiptext">The stalls, where the audience is seated.</span>
+<div id="front_stalls_l"><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div>
+<div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div>
+<div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div>
+<div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div>
+<div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div>
+<div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div>
+</div>
+<div id="central_stalls"><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div>
+<div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div>
+<div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div>
+<div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div>
+<div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div>
+<div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div>
+</div>
+<div id="front_stalls_r"><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div>
+<div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div>
+<div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div>
+<div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div>
+<div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div>
+<div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div><div class="stall"></div>
+</div>
+</div>
+
+</div>
+  <script src="scripts.js"></script>
+</body>
+</html>
